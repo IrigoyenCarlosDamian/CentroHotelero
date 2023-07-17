@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}{% endblock titulo%}</title>
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'css/fuentes/fonts.css' %}">
+          <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome/css/all.min.css' %}">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static 'css/admin/adminlte.css'%}">
+        <link rel="stylesheet" href="{% static 'css/estilos/estilos.css'%}">
+    {% endblock head %}
+
+</head>
+<body>
+    {% block body %}
+    {% endblock body%}
+    {% block js %}
+        <script src="{% static 'js/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'js/boos/bootstrap.bundle.js'%}"></script>
+        <script src="{% static 'js/admin/adminlte.js'%}"></script>
+        <script src="{% static 'js/dark/darkmode.js' %}"></script>
+    {% endblock js %}
+</body>
+</html>

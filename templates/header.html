@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Pagina De Inicio{% endblock titulo %}</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="{% static 'css/fuentes/fonts.css' %}">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{% static 'css/font-awesome/css/all.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'css/admin/adminlte.css'%}">
+    <link rel="stylesheet" href="{% static 'css/estilos/estilos.css'%}">
+</head>
+<body class="hold-transition layout-top-nav">
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-dark">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="{% static 'img/hotel.png' %}" alt="Djangoteles"
+                 class="brand-image"
+                 style="opacity: .8">
+            <span class="brand-text font-weight-light">Djangotels</span>
+        </a>
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% block gestiones %}
+
+        {% endblock %}
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="fas fa-power-off"></i>
+
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a href="{% url 'logout' %}" class="dropdown-item">
+                        <i class="fas fa-outdent"></i> Cerrar Sesion
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <button class="switch" id="switch">
+					<span><i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+        </button>
+    </div>
+</nav>
+<script src="{% static 'js/dark/darkmode.js'%}"></script>
+</body>
+
+</html>
+
+
+
+
+
+

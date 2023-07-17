@@ -1,0 +1,47 @@
+{% extends 'header.html' %}
+
+{% block gestiones %}
+    <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link"><i class="fas fa-home"></i>Inicio</a>
+            </li>
+            <!-- Hoteles -->
+            <li class="nav-item dropdown">
+                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   class="nav-link dropdown-toggle">Hoteles</a>
+                <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                    <li><a href="#" class="dropdown-item">Listado de hoteles </a></li>
+                    <li><a href="#" class="dropdown-item">Listado de categorias</a></li>
+                    <li><a href="#" class="dropdown-item">Listado de tipos de habitacion</a></li>
+                    <li class="dropdown-divider"></li>
+                </ul>
+            </li>
+            <!-- Fin Hoteles -->
+            <!-- Personas -->
+            <li class="nav-item dropdown">
+                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   class="nav-link dropdown-toggle">Personal/Clientes</a>
+                <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                    <li><a href="#" class="dropdown-item">Listado de clientes </a></li>
+                    <li><a href="#" class="dropdown-item">Listado de encargados</a></li>
+                    <li><a href="#" class="dropdown-item">Listado de vendedores</a></li>
+                    <li class="dropdown-divider"></li>
+                </ul>
+            </li>
+                <!-- Fin Personas -->
+                <!-- Medios de pago -->
+            <li class="nav-item dropdown">
+                <a id="mediosDePago" href="#" aria-haspopup="true" aria-expanded="false"
+                   class="nav-link">Medios de pago</a>
+            </li>
+                <!-- Fin Medios de pago -->
+                <!-- Paises -->
+            <li class="nav-item dropdown">
+                <a id="paises" href="#" aria-haspopup="true" aria-expanded="false"
+                   class="nav-link">Localidades</a>
+            </li>
+                <!-- Fin Paises -->
+        </ul>
+    </div>
+{% endblock %}
